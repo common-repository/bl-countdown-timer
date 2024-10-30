@@ -1,0 +1,43 @@
+
+<div id="logoContainer" class="goRight" onclick="window.open('http://www.strategies.co.uk/', '_blank');">
+	<img src="/wp-content/plugins/bl-countdown-timer/images/logo.png" width="175px" height="60px" alt="Plugin made by Strategies.co.uk" title="Plugin made by Strategies.co.uk" />
+</div>
+<div class="clear"></div>
+
+<div class="bl_section">
+	<div class="bl_title">
+		<img src="/wp-content/plugins/bl-countdown-timer/images/countdown.png" alt=""/><h3>Add Countdown Timer</h3>
+		<span class="submit goRight"><input name="save" type="submit" value="Add New" /></span>
+		<div class="clear"></div>
+	</div>
+	
+	<div class="bl_options">
+		<div class="bl_row">
+			<label for="title">Event title</label>
+			<input type="text" name="title" id="title" value="<?php if(isset($_POST['title'])){ echo htmlentities(stripslashes($_POST['title']), ENT_QUOTES, "UTF-8"); } ?>" maxlength="20" size="45" />
+			<small>The text above the countdown timer</small>
+			<?php if(isset($titleError)){ echo '<br/><span class="error">' . $titleError . '</span>'; } ?>
+		</div>
+		
+		<div class="bl_row">
+			<label for="counterdate">Event Date</label>
+			<input type="text" name="counterdate" id="counterdate" class="datepicker" value="<?php if(isset($_POST['counterdate'])){ echo htmlentities($_POST['counterdate'], ENT_QUOTES, "UTF-8"); } ?>" size="45" />
+			<small>Run the countdown timer until this date<br/>Date must be in <abbr title="Day">dd</abbr>-<abbr title="Month">mm</abbr>-<abbr title="Year">yyyy</abbr> format (EG: 01/12/2013)</small>
+			<?php if(isset($dateError)){ echo '<br/><span class="error">' . $dateError . '</span>'; } ?>
+		</div>	
+		
+		<div class="bl_row">
+			<label for="countertime">Event Time</label>
+			<input type="text" name="countertime" id="countertime" value="<?php if(isset($_POST['countertime'])){ echo htmlentities($_POST['countertime'], ENT_QUOTES, "UTF-8"); } ?>" size="45" />
+			<small>Run the countdown timer until this time</small>
+			<?php if(isset($timeError)){ echo '<br/><span class="error">' . $timeError . '</span>'; } ?>
+		</div>
+		
+		<div class="bl_row">
+			<label for="title">Event Description</label>
+			<input type="text" name="desc" id="desc" value="<?php if(isset($_POST['desc'])){ echo htmlentities(stripslashes($_POST['desc']), ENT_QUOTES, "UTF-8"); } ?>"  maxlength="30"  size="45" />
+			<small>The text below the countdown timer</small>
+			<?php if(isset($descError)){ echo '<br/><span class="error">' . $descError . '</span>'; } ?>
+		</div>
+	</div>
+</div>

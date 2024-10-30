@@ -1,0 +1,154 @@
+
+/* overwrite the styles for the wordpress message box on add/update/delete */
+div.updated, div.error{
+	width: 535px;
+	float: left;
+}
+
+#pluginAdminTitle { margin: 5px 0 0 0; }
+#logoContainer { margin: -35px 0 10px 0; }
+#logoContainer:hover{ cursor: pointer; }
+
+
+.goLeft{ float: left; }
+.goRight{ float: right; }
+.clear { float: none; clear: both; }
+
+.bl_wrap{ width: 810px; }
+
+.bl_section{
+	border:1px solid #ddd;
+	background:#f9f9f9;
+	margin: 0 0 35px 0;
+}
+
+.bl_row {
+	padding:20px 10px;
+	border-bottom:1px solid #ddd;
+	border-top:1px solid #fff;
+}
+
+.bl_opts label, .bl_row label {
+	font-size:12px;
+	font-weight:700;
+	width:150px;
+	display:block;
+	float:left;	
+}
+
+.bl_opts small, .bl_row small{
+	display:block;
+	font-size: 0.8em !important;
+	padding: 4px 0 0 0;
+	float:right;
+	width:270px;
+	color:#999;
+}
+.bl_opts input[type="text"]{  /*  .bl_opts select */
+	font-size:12px;
+	padding:4px;
+	color:#333;
+	line-height:1em;
+	background:#f3f3f3;
+}
+.bl_row input:focus, .row textarea:focus{
+	background:#fff;
+}
+.bl_row textarea{
+	width:280px;
+	height:175px;
+	font-size:12px;
+	padding:4px;
+	color:#333;
+	line-height:1.5em;
+	background:#f3f3f3;
+}
+.bl_title h3 {
+	font-size:1.1em;
+	margin: 0 0 0 10px;
+	font-weight:bold;
+	color:#232323;
+	float:left;
+	padding: 20px 10px 8px 0px;
+	line-height: 18px;
+}
+
+.bl_title{
+	border-bottom:1px solid #ddd;
+	background:#eee;
+	padding:0;
+}
+
+
+.bl_title img{
+	margin: 10px 0 10px 10px;
+	width:35px;
+	height:35px;	
+	background:url('images/countdown.png') no-repeat 0 0;
+	float:left;
+}
+
+.wrap h2{ margin-bottom: 15px; }
+
+.bl_title span.submit{
+	display:block;
+	float:right;
+	margin:0 10px 0 0;
+	padding:0;
+	padding:14px 0;
+}
+
+.bl_table th, .bl_table td{
+	border:1px solid #bbb;
+	padding:10px;
+	text-align:center;
+}
+
+.bl_table th, .bl_table td.feature{ border-color:#888; }
+
+
+
+.expired { color: #F90000 !important; }
+.disabled { color: #555555 !important; }
+.enabled { color: #008800 !important; }
+
+
+table#timers { margin: 15px 5px 25px 5px; }
+table#timers thead tr { background: #555; color: #FFF; font-weight: bold; }
+table#timers th { padding: 5px; }
+table#timers td{ padding: 2px 5px; }
+
+
+/* Message Boxes */
+.infoMsg, .successMsg, .warningMsg, .errorMsg, .validationMsg{
+	border: 1px solid;
+	margin: 10px 0px;
+	padding: 10px;
+	text-align: center;
+	/*background-repeat: no-repeat;
+	background-position: 10px center;*/
+}
+.infoMsg {
+	color: #00529B;
+	background-color: #BDE5F8;
+	background-image: url('info.png');
+}
+.successMsg {
+	color: #4F8A10;
+	background-color: #DFF2BF;
+	background-image:url('success.png');
+}
+.warningMsg {
+	color: #9F6000;
+	background-color: #FEEFB3;
+	background-image: url('warning.png');
+}
+.errorMsg {
+	color: #D8000C;
+	background-color: #FFBABA;
+	background-image: url('error.png');
+}
+
+
+/* Form errors */
+.error { margin: 5px 0 0 155px; font-size: 0.9em; color: #D8000C; } 
